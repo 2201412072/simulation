@@ -1,0 +1,19 @@
+.data
+num: 1000
+.text
+main:
+	sub r0,r0,r0
+	addi r8,r1,num
+	sub r9,r9,r9
+	sub r10,r10,r10
+	LW r2, 0(r8)
+	LW r3,4(r8)
+	lw r4,8(r8)
+	sw num(r0),r8
+	beqz r0,func
+	trap 0
+	trap 0
+func:
+	lw r5,0(r8)
+	add r6,r5,r3
+	trap 0
